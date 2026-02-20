@@ -19,7 +19,13 @@ Output: true
 Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
  
 
-Constraints:class Solution {
+Constraints:
+
+1 <= s.length <= 104
+s consists of lowercase English letters.
+
+Program:
+class Solution {
     public boolean repeatedSubstringPattern(String s) {
         int n = s.length();
         int[] lps = new int[n];
@@ -46,8 +52,3 @@ Constraints:class Solution {
         return (longestPrefixSuffix > 0 && n % (n - longestPrefixSuffix) == 0);
     }
 }
-
-1 <= s.length <= 104
-s consists of lowercase English letters.
-
-Program:
